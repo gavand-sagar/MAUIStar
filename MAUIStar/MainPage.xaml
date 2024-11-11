@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUIStar"
+             xmlns:models="clr-namespace:MAUIStar.Models"
+             x:Class="MAUIStar.MainPage">
+    <ContentPage.Resources>
+        <models:Car x:Key="yyy"/>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label>First Name :</Label>
+            <Entry x:Name="firstName">
+                <Entry.Placeholder>Type First Name here...</Entry.Placeholder>
+                <Entry.Text>Sagar</Entry.Text>
+            </Entry>
+            <Label>Last Name :</Label>
+            <Entry x:Name="lastName" Text="" Placeholder="Type Last Name Here..."/>
+            <Label>Email :</Label>
+            <Entry x:Name="email" Text="" Placeholder="Type Email Here..."/>
+            <Label>Password :</Label>
+            <Entry x:Name="password" IsPassword="True" Text="" Placeholder="Type Password Here..."/>
+            <Label>Re-Type Password :</Label>
+            <Entry x:Name="retypePassword" Text="" Placeholder="Re-Type Password Here..."/>
+            <Label IsVisible="False" TextColor="Red" x:Name="passwordError">Password and Re-typed password should match.</Label>
+            <Label>City :</Label>
+            <Picker x:Name="city">
+                <Picker.Items>
+                    <x:String>Mumbai</x:String>
+                    <x:String>Delhi</x:String>
+                    <x:String>Banglore</x:String>
+                    <x:String>Chennai</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label>Date of Birth :</Label>
+            <DatePicker x:Name="dob" MaximumDate="2024-11-05"></DatePicker>
+
+            <CheckBox x:Name="agree"/>
+            <Label>I Agree the terms and conditions.</Label>
+            <Label IsVisible="False" TextColor="Red" x:Name="agreeError">You Must Agree to the terms and conditions.</Label>
+
+            <Button Clicked="Button_Clicked" Text="CLICK ME"></Button>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

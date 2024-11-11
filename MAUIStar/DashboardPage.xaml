@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIStar.DashboardPage"
+             Title="DashboardPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button Clicked="MainPageClick" Text="Main Page"></Button>
+        <Button Clicked="ProfileClicked" Text="Profile"></Button>
+        <Button Clicked="MyMailsClicked" Text="My Mails"></Button>
+        <Button Clicked="MyFlyoutClicked" Text="My Flyout"></Button>
+    </VerticalStackLayout>
+</ContentPage>

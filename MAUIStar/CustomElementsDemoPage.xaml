@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUIStar"
+             x:Class="MAUIStar.CustomElementsDemoPage"
+             Title="CustomElementsDemoPage">
+    <VerticalStackLayout>
+        <local:UserInformation Username="Sagar Gavand" Email="sagar@sagar.cc"/>
+        <local:UserInformation  Username="Amit Shah" Email="sagar@sagar.cc"/>
+        <Button Text="CLICK ME"></Button>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:MAUIStar.ViewModels"
+             x:Class="MAUIStar.Views.SimpleCalculator"
+             Title="SimpleCalculator">
+    <ContentPage.Resources>
+        <viewModel:SimpleCalculatorViewModel x:Key="myObject"/>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <StaticResource Key="myObject"></StaticResource>
+    </ContentPage.BindingContext>
+    <VerticalStackLayout 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" >
+        <Label>First Name :</Label>
+        <Entry Text="{Binding Path=PersonObj.FirstName, Mode=TwoWay}">
+            <Entry.Placeholder>Type First Name here...</Entry.Placeholder>
+        </Entry>
+        <Image Source="https://tempfileserver.onrender.com/uploads/1731296907320.jpg"/>
+        <Label IsVisible="{Binding FirstNameErrorVisible}">First name is Required </Label>
+        <Label>Last Name :</Label>
+        <Entry Text="{Binding Path=PersonObj.LastName}" Placeholder="Type Last Name Here..."/>
+        <Label>Email :</Label>
+        <Entry Text="{Binding Path=PersonObj.Email}" Placeholder="Type Email Here..."/>
+        <Label>Password :</Label>
+        <Entry Text="{Binding Path=PersonObj.Password}" IsPassword="True"   Placeholder="Type Password Here..."/>
+        <Label>Date of Birth :</Label>
+        <DatePicker Date="{Binding Path=PersonObj.DOB}"></DatePicker>
+        <Picker SelectedItem="{Binding Path=PersonObj.Address.City}">
+            <Picker.Items>
+                <x:String>Mumbai</x:String>
+                <x:String>Delhi</x:String>
+                <x:String>Banglore</x:String>
+                <x:String>Chennai</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Command="{Binding SaveCommand}" Text="Click Me"></Button>
+        <Button Command="{Binding CancelCommand}" Text="Click Me"></Button>
+    </VerticalStackLayout>
+</ContentPage>

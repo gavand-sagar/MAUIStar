@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MAUIStar"
+             x:Class="MAUIStar.BindingsDemo"
+             
+             Title="BindingsDemo">
+
+    <ContentPage.Resources>
+        <local:Person x:Key="myObject"></local:Person>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <StaticResource Key="myObject"></StaticResource>
+    </ContentPage.BindingContext>
+
+
+    <VerticalStackLayout VerticalOptions="Center" 
+            HorizontalOptions="Center">
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

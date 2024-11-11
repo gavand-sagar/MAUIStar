@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIStar.MyMailsPage"
+             Title="MyMailsPage">
+    <ContentPage Title="Primary">
+        <StackLayout Orientation="Vertical">
+            <Label>First Name :</Label>
+            <Entry x:Name="firstName">
+                <Entry.Placeholder>Type First Name here...</Entry.Placeholder>
+                <Entry.Text>Sagar</Entry.Text>
+            </Entry>
+            <Label>Last Name :</Label>
+            <Entry x:Name="lastName" Text="" Placeholder="Type Last Name Here..."/>
+            <Label>Email :</Label>
+            <Entry x:Name="email" Text="" Placeholder="Type Email Here..."/>
+            <Label>Password :</Label>
+            <Entry x:Name="password" IsPassword="True" Text="" Placeholder="Type Password Here..."/>
+            <Label>Re-Type Password :</Label>
+            <Entry x:Name="retypePassword" Text="" Placeholder="Re-Type Password Here..."/>
+            <Label IsVisible="False" TextColor="Red" x:Name="passwordError">Password and Re-typed password should match.</Label>
+            <Label>City :</Label>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Secondary">
+        <StackLayout Orientation="Vertical">
+            <Label>Mail 2</Label>
+            <Label>Mail 2</Label>
+            <Label>Mail 2</Label>
+            <Label>Mail 2</Label>
+            <Label>Mail 2</Label>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

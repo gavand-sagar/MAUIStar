@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIStar.StackDemo"
+             Title="StackDemo">
+    <!--<StackLayout Spacing="40" BackgroundColor="Blue" Padding="20" Orientation="Vertical">
+        <StackLayout HeightRequest="100" WidthRequest="400" BackgroundColor="Green" Orientation="Horizontal">
+            <Button Text="Apple"></Button>
+            <Button Text="Mango"></Button>
+            <Button Text="Kiwi"></Button>
+            <Button Text="Banana"></Button>
+        </StackLayout>
+        <StackLayout HeightRequest="100" WidthRequest="400" BackgroundColor="Red" Orientation="Horizontal">
+            <Button Text="Apple"></Button>
+            <Button Text="Mango"></Button>
+            <Button Text="Kiwi"></Button>
+            <Button Text="Banana"></Button>
+        </StackLayout>
+    </StackLayout>-->
+    <!--<Grid RowDefinitions="100,*,auto" ColumnDefinitions="100,*,*">
+        <Button Grid.Row="0" Grid.Column="0" Text="Apple" Grid.RowSpan="2"></Button>
+        <Button Grid.Row="0" Grid.Column="1" Text="Mango" Grid.ColumnSpan="2"></Button>
+
+        <Button Grid.Row="1" Grid.Column="1" Text="Banana"></Button>
+        <Button Grid.Row="1" Grid.Column="2" Text="Banana"></Button>
+
+    </Grid>-->
+    <Grid ColumnDefinitions="200,*,*" RowDefinitions="50,*,*">
+        <StackLayout BackgroundColor="AliceBlue" Grid.RowSpan="3" Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+            <Button Text="HOME"/>
+            <Button Text="HOME"/>
+            <Button Text="HOME"/>
+        </StackLayout>
+        <FlexLayout BackgroundColor="Purple" Grid.ColumnSpan="2" JustifyContent="End" Grid.Row="0" Grid.Column="1">
+            <Button Text="HOME"/>
+            <Button Text="HOME"/>
+        </FlexLayout>
+
+        <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" BackgroundColor="White" Text="."></Button>
+    </Grid>
+    
+</ContentPage>
