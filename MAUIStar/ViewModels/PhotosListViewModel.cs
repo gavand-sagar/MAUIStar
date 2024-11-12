@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace MAUIStar.ViewModels
 {
-    public class PhotosListViewModel : INotifyPropertyChanged
+    public class PhotosListViewModel : BaseViewModel
     {
         private HttpClient _httpClient;
         private string _myName;
@@ -28,13 +28,6 @@ namespace MAUIStar.ViewModels
 
 
         private ObservableCollection<MyFile> _images;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        void RaiseProperyChanged(string PropertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
-        }
 
         public ObservableCollection<MyFile> Images
         {

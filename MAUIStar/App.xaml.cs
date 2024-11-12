@@ -8,7 +8,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new PhotosListPage(); //new NavigationPage(new DashboardPage());
+		MainPage = new ProductListPage(); //new NavigationPage(new DashboardPage());
 
     }
 }

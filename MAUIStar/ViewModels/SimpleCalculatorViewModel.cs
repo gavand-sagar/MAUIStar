@@ -10,11 +10,10 @@ using System.Windows.Input;
 namespace MAUIStar.ViewModels
 {
 
-    
 
-    public class SimpleCalculatorViewModel : INotifyPropertyChanged
+
+    public class SimpleCalculatorViewModel : BaseViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
 
         public Person PersonObj { get; set; }
 
@@ -23,7 +22,8 @@ namespace MAUIStar.ViewModels
         public bool FirstNameErrorVisible
         {
             get { return _firstNameErrorVisible; }
-            set { 
+            set
+            {
                 FirstNameErrorVisible = value;
                 RaiseProperyChanged(nameof(FirstNameErrorVisible));
             }
@@ -46,17 +46,13 @@ namespace MAUIStar.ViewModels
 
         }
 
-        void RaiseProperyChanged(string PropertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(PropertyName));
-        }
 
         private void ExecuteCancel(object obj)
         {
 
         }
 
-       
+
 
     }
 }
