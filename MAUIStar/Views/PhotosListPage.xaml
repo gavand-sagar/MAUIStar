@@ -4,11 +4,10 @@
              xmlns:local ="clr-namespace:MAUIStar"
              xmlns:viewModels ="clr-namespace:MAUIStar.ViewModels"
              x:Class="MAUIStar.Views.PhotosListPage"
+             BindingContext="{Binding Source={StaticResource ViewModelLocator}, Path=PhotosListViewModel}"
              x:Name="PhotosPage"
              Title="PhotosListPage">
-    <ContentPage.BindingContext>
-        <viewModels:PhotosListViewModel/>
-    </ContentPage.BindingContext>
+   
     <VerticalStackLayout>
         <Button Command="{Binding UploadFromFiles}" Text="Upload From Files" HeightRequest="50" FontSize="15" Padding="5"></Button>
         <CollectionView HeightRequest="100" ItemsSource="{Binding Images}">

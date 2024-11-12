@@ -4,11 +4,28 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MAUIStar"
+    xmlns:Views="clr-namespace:MAUIStar.Views"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    <ShellContent
+        Title="Product List"
+        ContentTemplate="{DataTemplate Views:ProductListPage}"
+        Route="ProductListPage" />
+
+    <ShellContent
+        Title="Simple Calculator"
+        ContentTemplate="{DataTemplate Views:SimpleCalculator}"
+        Route="SimpleCalculator" />
+
+    <ShellContent
+        Title="Photos List"
+        ContentTemplate="{DataTemplate Views:PhotosListPage}"
+        Route="PhotosListPage" />
+
 
 </Shell>

@@ -1,4 +1,5 @@
 ﻿using MAUIStar.Models;
+using MAUIStar.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -32,6 +33,7 @@ namespace MAUIStar.ViewModels
         }
 
         public int PageSize { get; set; } = 10;
+        public int TotalItems { get; set; } = 0;
 
         private ObservableCollection<Product> _productsList;
         public ObservableCollection<Product> ProductsList
@@ -47,9 +49,10 @@ namespace MAUIStar.ViewModels
         public ICommand NextCommand { get; set; }
         public ICommand PrevCommand { get; set; }
 
-
-        public ProductListPageViewModel()
+        IDialogService _dialogService;
+        public ProductListPageViewModel(IDialogService dialogService)
         {
+            _dialogService = dialogService;
             PageNumber = 1;
             ProductsList = new ObservableCollection<Product>();
             NextCommand = new CommonCommand(NextClicked);
@@ -68,8 +71,11 @@ namespace MAUIStar.ViewModels
 
         private void NextClicked(object obj)
         {
-            PageNumber++;
-            LoadData();
+            if (ProductsList.Count() < TotalItems)
+            {
+                PageNumber++;
+                LoadData();
+            }
         }
 
         private void LoadData()
@@ -77,6 +83,7 @@ namespace MAUIStar.ViewModels
             using (HttpClient client = new HttpClient())
             {
                 ProductListResponse response = client.GetFromJsonAsync<ProductListResponse>($"https://dummyjson.com/products?limit={PageSize}&skip={(PageNumber - 1) * PageSize}&select=title,price,id").Result;
+                TotalItems = response.Total;
                 foreach (var item in response.Products)
                 {
                     this.ProductsList.Add(item);

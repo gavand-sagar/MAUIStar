@@ -2,13 +2,19 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUIStar.Views.ProductListPage"
-             xmlns:viewModels="clr-namespace:MAUIStar.ViewModels"
+             xmlns:ViewModels="clr-namespace:MAUIStar.ViewModels"
+             xmlns:Services="clr-namespace:MAUIStar.Services"
+             xmlns:local="clr-namespace:MAUIStar"
+             BindingContext="{Binding Source={StaticResource ViewModelLocator}, Path=ProductListPageViewModel}"
              Title="ProductListPage">
-    <ContentPage.BindingContext>
-        <viewModels:ProductListPageViewModel/>
-    </ContentPage.BindingContext>
-    <VerticalStackLayout>
-        <HorizontalStackLayout>
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Entry>
+            <Entry.Behaviors>
+                <local:UppperCaseBehaviour/>
+                <local:LimitLetters Max="5"/>
+            </Entry.Behaviors>
+        </Entry>
+        <!--<HorizontalStackLayout>
             <Button Text="Prev" Command="{Binding PrevCommand}"></Button>
             <Label Text="{Binding PageNumber}"></Label>
             <Button Text="Next" Command="{Binding NextCommand}"></Button>
@@ -22,7 +28,7 @@
                     </HorizontalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>
+        </CollectionView>-->
 
     </VerticalStackLayout>
 </ContentPage>

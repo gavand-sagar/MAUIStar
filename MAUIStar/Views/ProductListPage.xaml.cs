@@ -18,4 +18,5 @@ public partial class ProductListPage : ContentPage
         }
 
     }
+
 }
