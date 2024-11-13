@@ -8,6 +8,8 @@ namespace MAUIStar.Services
 {
     public interface IDialogService
     {
-        void ShowAlert();
+        void ShowAlert(string title, string message, string cancel);
+        void ShowAlert(string title, string message);
+        void ShowAlert(string message);
     }
 }

@@ -73,6 +73,12 @@
 	  <MauiXaml Update="UserInformation.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\DependencyDemoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\PhotosListPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

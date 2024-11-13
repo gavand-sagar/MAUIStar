@@ -14,6 +14,7 @@
                 <local:LimitLetters Max="5"/>
             </Entry.Behaviors>
         </Entry>
+        <Button Text="{Binding Token}"></Button>
         <!--<HorizontalStackLayout>
             <Button Text="Prev" Command="{Binding PrevCommand}"></Button>
             <Label Text="{Binding PageNumber}"></Label>

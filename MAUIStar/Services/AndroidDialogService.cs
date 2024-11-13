@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MAUIStar.Services
 {
-    public class DialogService : IDialogService
+    public class AndroidDialogService : IDialogService
     {
         public void ShowAlert(string title, string message, string cancel)
         {
@@ -20,7 +20,7 @@ namespace MAUIStar.Services
 
         public void ShowAlert(string message)
         {
-            ShowAlert("Alert", message, "OK");
+            ShowAlert("Alert FROM ANDROID", message, "OK");
         }
     }
 }

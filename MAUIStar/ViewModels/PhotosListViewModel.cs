@@ -1,4 +1,5 @@
 ﻿using MAUIStar.Models;
+using MAUIStar.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -40,18 +41,18 @@ namespace MAUIStar.ViewModels
         }
 
 
-        public PhotosListViewModel()
+        public PhotosListViewModel(IDialogService dialogService)
         {
             _httpClient = new HttpClient();
             DeleteCommond = new CommonCommand(DeleteImage);
             UploadFromFiles = new CommonCommand(OnUploadFromFiles);
 
             // call an api "https://dummyjson.com/products";
-            var result = _httpClient.GetFromJsonAsync<List<MyFile>>("https://tempfileserver.onrender.com/files").Result;
-            if (result != null)
-            {
-                this.Images = new ObservableCollection<MyFile>(result.Take(5).ToList());
-            }
+            //var result = _httpClient.GetFromJsonAsync<List<MyFile>>("https://tempfileserver.onrender.com/files").Result;
+            //if (result != null)
+            //{
+            //    this.Images = new ObservableCollection<MyFile>(result.Take(5).ToList());
+            //}
         }
 
         private async void OnUploadFromFiles(object obj)

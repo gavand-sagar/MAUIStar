@@ -27,5 +27,15 @@
         ContentTemplate="{DataTemplate Views:PhotosListPage}"
         Route="PhotosListPage" />
 
+    <ShellContent
+        Title="DI Demo"
+        ContentTemplate="{DataTemplate Views:DependencyDemoPage}"
+        Route="DependencyDemoPage" />
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate Views:LoginPage}"
+        Route="LoginPage" />
+
 
 </Shell>

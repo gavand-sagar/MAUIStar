@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIStar.Views.LoginPage"
+             BindingContext="{Binding Source={StaticResource ViewModelLocator}, Path=LoginPageViewModel}"
+             Title="LoginPage">
+    <VerticalStackLayout>
+        <Label>Username :</Label>
+        <Entry Text="{Binding User.Username}">
+            <Entry.Placeholder>Type UserName here...</Entry.Placeholder>
+        </Entry>
+        <Label>Password :</Label>
+        <Entry Text="{Binding User.Password}" IsPassword="True" Placeholder="Type Password Here..."/>
+        <Button Command="{Binding LoginCommand}" Text="LOGIN"/>
+    </VerticalStackLayout>
+</ContentPage>

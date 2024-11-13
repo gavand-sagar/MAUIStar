@@ -12,5 +12,7 @@ namespace MAUIStar.Services
         public static MauiApp App;
         public ProductListPageViewModel ProductListPageViewModel => App.Services.GetService<ProductListPageViewModel>();
         public PhotosListViewModel PhotosListViewModel => App.Services.GetService<PhotosListViewModel>();
+        public DependencyDemoPageViewModel DependencyDemoPageViewModel => App.Services.GetService<DependencyDemoPageViewModel>();
+        public LoginPageViewModel LoginPageViewModel => App.Services.GetService<LoginPageViewModel>();
     }
 }

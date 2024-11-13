@@ -16,7 +16,6 @@ public partial class ProductListPage : ContentPage
         {
             temmp.NextCommand.Execute(null);
         }
-
     }
 
 }
