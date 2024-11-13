@@ -7,12 +7,21 @@
              xmlns:local="clr-namespace:MAUIStar"
              BindingContext="{Binding Source={StaticResource ViewModelLocator}, Path=ProductListPageViewModel}"
              Title="ProductListPage">
+    <ContentPage.Resources>
+    </ContentPage.Resources>
     <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
         <Entry>
             <Entry.Behaviors>
                 <local:UppperCaseBehaviour/>
                 <local:LimitLetters Max="5"/>
             </Entry.Behaviors>
+            <Entry.BackgroundColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <On Platform="Android" Value="Red"/>
+                    <On Platform="iOS" Value="Blue"/>
+                    <On Platform="WinUI" Value="Green"/>
+                </OnPlatform>
+            </Entry.BackgroundColor>
         </Entry>
         <Button Text="{Binding Token}"></Button>
         <!--<HorizontalStackLayout>

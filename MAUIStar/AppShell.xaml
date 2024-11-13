@@ -36,6 +36,10 @@
         Title="Login"
         ContentTemplate="{DataTemplate Views:LoginPage}"
         Route="LoginPage" />
+    <ShellContent
+        Title="Animation Demo"
+        ContentTemplate="{DataTemplate Views:AnimtionDemo}"
+        Route="AnimtionDemo" />
 
 
 </Shell>
